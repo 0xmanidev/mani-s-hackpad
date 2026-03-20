@@ -145,7 +145,7 @@ Hardware designs (PCB, case) are licensed under CERN-OHL-P v2.
 ## 🙏 Acknowledgments
 
 - **Hack Club** - For fostering the maker community and providing the platform to share this
-- **KMK Firmware** - Amazing keyboard firmware framework ([kmkfw.io](http://kmkfw.io))
+- **KMK Firmware** - Amazing keyboard firmware framework 
 - **CircuitPython** - Making hardware programming accessible
 - **Seeed Studio** - Great XIAO RP2040 board
 ## 📧 Contact
@@ -157,10 +157,9 @@ Built by **Mani Dev**
 
 ## 🔗 Resources
 
-- [KMK Documentation](http://kmkfw.io/)
+- [KMK Documentation](https://github.com/KMKfw)
 - [XIAO RP2040 Wiki](https://wiki.seeedstudio.com/XIAO-RP2040/)
 - [DaVinci Resolve Shortcuts](https://documents.blackmagicdesign.com/UserManuals/DaVinci_Resolve_18_Keyboard_Shortcuts.pdf)
-- [Hack Club Community](https://hackclub.com/slack)
 
 ---
 
