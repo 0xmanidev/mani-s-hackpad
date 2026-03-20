@@ -55,7 +55,7 @@ Perfect for video editors who want faster, more intuitive editing without consta
    ```
 
 5. **Test!** - Board should show OLED display and RGB LEDs glowing
-6. upload designated firmware
+6. Upload designated firmware
 
 ## 🎮 Using the Macropad
 
@@ -111,7 +111,6 @@ keyboard.keymap = [
 ]
 ```
 
-See [QUICK_REFERENCE.md](docs/QUICK_REFERENCE.md) for all available key codes.
 
 ### Change RGB Effects
 
