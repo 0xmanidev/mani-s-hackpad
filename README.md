@@ -166,6 +166,5 @@ Built by **Mani Dev**
 
 **Made with ❤️ for the Hack Club community**
 
-[Join Hack Club](https://hackclub.com) | [Share in Slack](https://hackclub.com/slack) | [Submit Your Build](https://github.com/hackclub/blueprints)
-
+[Join Hack Club](https://hackclub.com) 
 ---
