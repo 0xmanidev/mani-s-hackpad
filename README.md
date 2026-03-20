@@ -2,7 +2,7 @@
 
 > A custom 4-key macropad with rotary encoder, OLED display, and RGB LEDs, designed specifically for DaVinci Resolve video editing workflows.
 
-![Macropad Hero Shot](assets/mani's hackpad.png)
+![Macropad Hero Shot](assets/mani'shackpad.png)
 
 
 ## ✨ What It Does
