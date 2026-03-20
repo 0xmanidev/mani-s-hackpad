@@ -152,7 +152,7 @@ Hardware designs (PCB, case) are licensed under CERN-OHL-P v2.
 
 Built by **Mani Dev**
 
-- GitHub: [@0xmanidev](https://github.com/0xmamidev)
+- GitHub: [@0xmanidev](https://github.com/0xmanidev)
 - Email: manikanta.vasamsetti.dev@gmail.com
 
 ## 🔗 Resources
