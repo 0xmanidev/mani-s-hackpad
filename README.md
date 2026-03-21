@@ -2,7 +2,7 @@
 DaVinci Resolve Macropad – Video Editing Controller
 ---
 A custom 4-key macropad with a rotary encoder, OLED display, and bright RGB LEDs, built just for DaVinci Resolve video editing workflows.
-
+/assests/mani'shackpad.png
 What This Macropad Does
 
 Editing in DaVinci Resolve gets way easier with this little controller. You get:
