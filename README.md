@@ -1,169 +1,134 @@
-# DaVinci Resolve Macropad - Video Editing Controller
+DaVinci Resolve Macropad – Video Editing Controller
 
-> A custom 4-key macropad with rotary encoder, OLED display, and RGB LEDs, designed specifically for DaVinci Resolve video editing workflows.
+A custom 4-key macropad with a rotary encoder, OLED display, and bright RGB LEDs, built just for DaVinci Resolve video editing workflows.
 
-![Macropad Hero Shot](assets/mani'shackpad.png)
+What This Macropad Does
 
+Editing in DaVinci Resolve gets way easier with this little controller. You get:
+- Classic J-K-L shuttle control—think fast playback, instant response
+- Mark In and Out keys for precise edits
+- Scrubbing frame-by-frame with a quick twist of the encoder
+- Undo/redo and extra editing tools on a second layer
+- Bright RGB LEDs and OLED display for instant visual feedback
 
-## ✨ What It Does
+If you edit a lot and your fingers keep flying back and forth across your keyboard, this macropad is the shortcut you’ve been dreaming of.
 
-This macropad gives you instant, tactile control over DaVinci Resolve's most essential shortcuts:
-- **J-K-L shuttle control** for playback (industry standard)
-- **I/O marks** for precise three-point editing
-- **Frame-by-frame scrubbing** with the rotary encoder
-- **Quick undo/redo** and editing tools on second layer
-- **Visual feedback** with RGB LEDs and OLED display
+Features
 
-Perfect for video editors who want faster, more intuitive editing without constantly reaching for keyboard shortcuts!
+- 4 clicky mechanical switches (compatible with Cherry MX)
+- A rotary encoder to scrub the timeline or adjust volume
+- OLED display shows layer and status info at a glance
+- 2 RGB LEDs (WS2812B) with breathing effects—eye candy included
+- 2 layers: main editing & tools/RGB control 
+- Easy-to-tweak firmware—customize away
+- Comes in a snappy 3D printed case
 
-## 🎯 Features
+How to Flash the Firmware
 
-- **4 Mechanical Switches** - Cherry MX compatible
-- **Rotary Encoder** - Scrub timeline or control volume
-- **OLED Display** - Shows current layer and status
-- **2 RGB LEDs** - WS2812B with breathing effects
-- **2 Layers** - Editing layer + Tools/RGB control layer
-- **Hot-swappable firmware** - Easy to customize
-- **with a case** - 3D printed bottom
+1. Install CircuitPython:
+   - Get it from circuitpython.org
+   - Hold BOOT, press RESET on the XIAO board
+   - Drag the .uf2 file onto the RPI-RP2 drive
 
-
-
-
-### Flash the Firmware
-
-1. **Install CircuitPython:**
-   - Download from [circuitpython.org](https://circuitpython.org/board/seeeduino_xiao_rp2040/)
-   - Hold BOOT, press RESET on XIAO
-   - Drag `.uf2` file to RPI-RP2 drive
-
-2. **Install KMK Firmware:**
-   ```bash
+2. Install KMK Firmware:
    git clone https://github.com/KMKfw/kmk_firmware.git
    cp -r kmk_firmware/kmk /path/to/CIRCUITPY/
-   ```
 
-3. **Install Libraries:**
-   - Download [Adafruit CircuitPython Bundle](https://circuitpython.org/libraries)
-   - Copy to `CIRCUITPY/lib/`:
-     - `adafruit_display_text/`
-     - `adafruit_displayio_ssd1306.mpy`
-     - `adafruit_framebuf.mpy`
+3. Install Libraries:
+   - Download the Adafruit CircuitPython Bundle
+   - Copy to CIRCUITPY/lib/:
+     - adafruit_display_text/
+     - adafruit_displayio_ssd1306.mpy
+     - adafruit_framebuf.mpy
 
-4. **Upload Firmware:**
-   ```bash
+4. Upload Firmware:
    cp firmware/code.py /path/to/CIRCUITPY/
-   ```
 
-5. **Test!** - Board should show OLED display and RGB LEDs glowing
-6. Upload designated firmware
+5. Test it: Your board should light up—OLED turns on, RGBs glow!
 
-## 🎮 Using the Macropad
+Using the Macropad
 
-### Default Layout
+Default Layout
 
-**Layer 0 (Normal Editing):**
-```
+Layer 0 (Main Editing)
 [J - Reverse]  [L - Forward]   [Hold: Layer 1]
 [I - Mark In]  [O - Mark Out]  [---]
 
-Turn Encoder: Scrub timeline frame-by-frame
-```
+Turn encoder for precise, frame-by-frame scrubbing.
 
-**Layer 1 (Tools - Hold encoder button):**
-```
-[Undo]         [Redo]          [---]
-[Blade Tool]   [Add Marker]    [---]
+Layer 1 (Tools – Hold encoder button)
+[Undo]         [Redo]
+[Blade Tool]   [Add Marker]
 
-Turn Encoder: Zoom timeline in/out
-```
+Encoder here zooms the timeline in and out.
 
-### Key Shortcuts
+Key Shortcuts
 
-- **J** - Play backwards (tap multiple times for faster playback)
-- **L** - Play forwards (tap multiple times for faster playback)
-- **I** - Mark In point (start of edit)
-- **O** - Mark Out point (end of edit)
-- **Encoder Turn** - Scrub timeline left/right (frame-by-frame)
+- J: Play backwards (hit it quickly for faster reverse)
+- L: Play forwards (again, tap fast for speed)
+- I: Mark In point for edits
+- O: Mark Out point for edits
+- Encoder Turn: Scrub timeline, frame by frame
 
-**Layer 1 (Hold encoder button):**
-- **Undo** (Ctrl+Z)
-- **Redo** (Ctrl+Shift+Z)
-- **B** - Blade/Cut tool
-- **M** - Add Marker
-- **Encoder Turn** - Zoom timeline (Ctrl+=/Ctrl+-)
+Layer 1 (Press & Hold Encoder Button)
+- Undo: Ctrl+Z
+- Redo: Ctrl+Shift+Z
+- Blade Tool: B
+- Add Marker: M
+- Encoder: Zooms timeline (Ctrl+=/Ctrl-)
 
-## 🎨 Customization
+Customization
 
-### Change Key Mappings
-
-Edit `firmware/code.py`:
-
-```python
+Want to adjust how the buttons work? Edit firmware/code.py:
 keyboard.keymap = [
     [
-        KC.SPACE,        # Change J to Play/Pause
-        KC.M,            # Change L to Add Marker
-        KC.MO(1),        # Layer switch
+        KC.SPACE,        # Make J Play/Pause instead
+        KC.M,            # Make L Add Marker
+        KC.MO(1),        # Switch layers
         KC.Q,            # Ripple Delete
         KC.W,            # Insert Edit
         KC.NO,
     ],
 ]
-```
 
+Change the RGB effects:
 
-### Change RGB Effects
-
-```python
 rgb = RGB(
-    animation_mode=AnimationModes.RAINBOW,  # Change animation
-    hue_default=0,     # 0=Red, 85=Green, 170=Blue
-    val_default=100,   # Brightness (0-255)
+    animation_mode=AnimationModes.RAINBOW,
+    hue_default=0,
+    val_default=100,
 )
-```
 
-### Add More Layers
+Add more layers if you switch between editing, color grading, or audio—just tweak and go.
 
-Perfect for switching between editing, color grading, and audio workflows!
+Why I Built This
 
+Honestly, reaching for tiny keys in the middle of the keyboard to shuttle or set markers slowed me down. I wanted editing to feel direct and fun—almost like playing music. The encoder makes scrubbing smooth, and with the OLED on top, I always know what my controller’s doing.
 
-## 🎬 Why This Project?
+This project made editing way less about typing and more about moving—with your hands, eyes, and focus on the story, not the keyboard.
 
-As a video editor, I was constantly reaching for keyboard shortcuts. The J-K-L shuttle control is the foundation of fast editing, but it's buried in the middle of the keyboard. Having dedicated, tactile keys for these essential controls transformed my editing workflow.
+License
 
-The rotary encoder is perfect for frame-by-frame scrubbing - much more intuitive than arrow keys. And the OLED display means I always know which layer I'm on.
+All code here falls under the MIT License (see LICENSE for details). Hardware (PCB, case) is CERN-OHL-P v2.
 
-This macropad makes editing feel more like playing an instrument than typing on a keyboard. 🎹
+Thanks
 
+Big cheers to:
+- Hack Club, for their awesome community
+- KMK Firmware, which just works
+- CircuitPython, for making hardware hacking easy
+- Seeed Studio, for the trusty XIAO RP2040
 
-## 📝 License
+Contact
 
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-Hardware designs (PCB, case) are licensed under CERN-OHL-P v2.
-
-## 🙏 Acknowledgments
-
-- **Hack Club** - For fostering the maker community and providing the platform to share this
-- **KMK Firmware** - Amazing keyboard firmware framework 
-- **CircuitPython** - Making hardware programming accessible
-- **Seeed Studio** - Great XIAO RP2040 board
-## 📧 Contact
-
-Built by **Mani Dev**
-
-- GitHub: [@0xmanidev](https://github.com/0xmanidev)
+Made by Mani Dev
+- GitHub: @0xmanidev
 - Email: manikanta.vasamsetti.dev@gmail.com
 
-## 🔗 Resources
+Resources
 
-- [KMK Documentation](https://github.com/KMKfw)
-- [XIAO RP2040 Wiki](https://wiki.seeedstudio.com/XIAO-RP2040/)
-- [DaVinci Resolve Shortcuts](https://documents.blackmagicdesign.com/UserManuals/DaVinci_Resolve_18_Keyboard_Shortcuts.pdf)
+- KMK Documentation
+- XIAO RP2040 Wiki
+- DaVinci Resolve Shortcuts
 
----
-
-**Made with ❤️ for the Hack Club community**
-
-[Join Hack Club](https://hackclub.com) 
----
+Made with ❤️ for Hack Club.
