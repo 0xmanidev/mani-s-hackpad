@@ -3,7 +3,7 @@
 A 4-key macropad with rotary encoder, OLED screen, and RGB LEDs for faster video editing in DaVinci Resolve.
 
 ![Macropad](assets/mani'shackpad.png)
-![Macropad](assetsgerber(still).png)
+![Macropad](assets/gerber(still).png)
 ![Macropad](assets/pcb_desgin.png)
 ![Macropad](assets/schematics.png)
 ## What It Does
