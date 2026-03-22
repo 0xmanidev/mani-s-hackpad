@@ -6,6 +6,7 @@ A 4-key macropad with rotary encoder, OLED screen, and RGB LEDs for faster video
 ![Macropad](assets/gerber(still).png)
 ![Macropad](assets/pcb_desgin.png)
 ![Macropad](assets/schematics.png)
+![Macropad](assets/assembly.png)
 ## What It Does
 
 - **J-K-L shuttle controls** for playback (reverse/forward)
