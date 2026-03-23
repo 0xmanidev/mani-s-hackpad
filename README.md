@@ -4,7 +4,7 @@ this is a project that is developed for me to increase my efficency in video edi
 ![Macropad](assets/gerber(still).png)
 ![Macropad](assets/pcb_desgin.png)
 ![Macropad](assets/schematics.png)
-![Macropad](assets/assembly.png)
+![Macropad](assets/)
 this macropad provides control through 4 switches and an encoder with switch gives feedback through the led and display and uses xiao Rp2040 as an MCU and it is a2x3 matrix of switches and this is a multi layered setup that switches modes based on encoder switch state 
 
 I used kicad for schematics and pcb design and fusion and thinker cad for case design and hack club community helped a lot in this process 
